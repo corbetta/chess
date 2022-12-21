@@ -354,6 +354,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/DiagonalMovement.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/LMovement.cs"
 "Assets/Scripts/Movement.cs"
 "Assets/Scripts/MovementStyle.cs"
 "Assets/Scripts/OrthogonalMovement.cs"
