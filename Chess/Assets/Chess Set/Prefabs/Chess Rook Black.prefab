@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4000012489383122}
   - component: {fileID: 33000012288121122}
   - component: {fileID: 23000012475157416}
+  - component: {fileID: -552377591186638188}
+  - component: {fileID: 2177352235138322215}
+  - component: {fileID: 1295920238859039829}
   m_Layer: 0
   m_Name: Chess Rook Black
   m_TagString: Untagged
@@ -83,3 +86,43 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-552377591186638188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013351177638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b3291faf684e4f8616aeef3ffb523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
+  posY: 0
+  team: 1
+--- !u!114 &2177352235138322215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013351177638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ac35b4c85a91940b6710d2a98ff525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1295920238859039829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013351177638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41e3ffe990b154092ddd5f43ea239f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 99

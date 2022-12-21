@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4000010292491684}
   - component: {fileID: 33000012717517702}
   - component: {fileID: 23000012025704030}
+  - component: {fileID: 2433674572722108819}
+  - component: {fileID: -1878523613959223678}
+  - component: {fileID: 4787105867574891684}
   m_Layer: 0
   m_Name: Chess Pawn Black
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2433674572722108819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014207659374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b3291faf684e4f8616aeef3ffb523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
+  posY: 0
+  team: 1
+--- !u!114 &-1878523613959223678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014207659374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ac35b4c85a91940b6710d2a98ff525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4787105867574891684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000014207659374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7684edfb34045e94ebe24242841b789d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,6 +18,12 @@ public class Piece : MonoBehaviour
     public bool Alive { get { return alive; } }
     public bool HasMoved { get { return hasMoved; } }
 
+    void Start() {
+        //set posX and posY based on the location in the scene. in the future this should go the other way around - posX and posY should decide where each piece starts on the scene
+        posX = (int)transform.position.x;
+        posY = (int)transform.position.z;
+    }
+
     /// <summary>
     /// Move this piece to this new position
     /// </summary>

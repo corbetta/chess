@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 4000011301568552}
   - component: {fileID: 33000014251192462}
   - component: {fileID: 23000013641408362}
+  - component: {fileID: -5874330484029224985}
+  - component: {fileID: 741259634689231919}
+  - component: {fileID: 1180968744918217904}
+  - component: {fileID: 7842422861799510900}
   m_Layer: 0
   m_Name: Chess King White
   m_TagString: Untagged
@@ -83,3 +87,56 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-5874330484029224985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013557280178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7b3291faf684e4f8616aeef3ffb523, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posX: 0
+  posY: 0
+  team: 0
+--- !u!114 &741259634689231919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013557280178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ac35b4c85a91940b6710d2a98ff525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1180968744918217904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013557280178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c41e3ffe990b154092ddd5f43ea239f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 1
+--- !u!114 &7842422861799510900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000013557280178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 063de99bab05c664c8b637eef8d34799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 1
