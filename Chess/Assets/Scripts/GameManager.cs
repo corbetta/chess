@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private float timeBetweenMoves;
     private float moveTimer;
     private TeamColor playersTurn;
-    [SerializeField] private bool debugSpaceBarToMove;
+    [SerializeField] private bool spaceBarToMove;
 
     private Piece[] pieces;
     private List<Piece> whitePieces = new List<Piece>();
@@ -32,15 +33,20 @@ public class GameManager : MonoBehaviour
     }
     void Update() {
         NewMoveLogic();
+        
+        //reload scene if you press R
+        if (Input.GetKeyDown(KeyCode.R)){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     /// <summary>
     /// Every X seconds, take a turn for a different player by trying to brute force move pieces until one moves
     /// </summary>
     private void NewMoveLogic() {
-        if (debugSpaceBarToMove) {
+        if (spaceBarToMove) {
             if (Input.GetKeyDown(KeyCode.Space)) {
-                StartNewMove();
+                StartNewMove(null);
             }
         }
         else {
@@ -48,32 +54,40 @@ public class GameManager : MonoBehaviour
                 moveTimer += Time.deltaTime;
             }
             else { //start a new move
-
                 moveTimer = 0; //reset timer
-                StartNewMove();
+                StartNewMove(null);
             }
         }
     }
 
-    private void StartNewMove() {
+    /// <summary>
+    /// Start attempting to move a piece. Set pieceSelected to null if you want a random piece moved.
+    /// </summary>
+    /// <param name="pieceSelected"></param>
+    private void StartNewMove(Piece pieceSelected) {
         bool moveMade = false;
         while (!moveMade) {
-            Piece tempPiece;
-            int randomElement = Random.Range(0, whitePieces.Count); //assuming that whitePiece and blackPieces have the same count
-            if (playersTurn == TeamColor.White) {
-                tempPiece = whitePieces[randomElement];
+            Piece pieceToMove;
+            if (pieceSelected != null) {
+                pieceToMove = pieceSelected;
             }
             else {
-                tempPiece = blackPieces[randomElement];
+                int randomElement = Random.Range(0, whitePieces.Count); //assuming that whitePiece and blackPieces have the same count
+                if (playersTurn == TeamColor.White) {
+                    pieceToMove = whitePieces[randomElement];
+                }
+                else {
+                    pieceToMove = blackPieces[randomElement];
+                }
             }
             for (int i = 0; i < 100; i++) { //try brute force moving this piece 100 times before we give up and move on to another piece
 
                 int posX = Random.Range(0, 8);
                 int posY = Random.Range(0, 8);
-                if (tempPiece.GetComponent<Movement>().CanIMoveHere(posX, posY)) { //if I can move this piece to the randomly selected location
+                if (pieceToMove.GetComponent<Movement>().CanIMoveHere(posX, posY)) { //if I can move this piece to the randomly selected location
 
                     //move the piece
-                    tempPiece.MovePiece(posX, posY);
+                    pieceToMove.MovePiece(posX, posY);
 
                     //switch playersTurn to the other player
                     if (playersTurn == TeamColor.White) {

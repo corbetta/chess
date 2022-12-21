@@ -3,24 +3,23 @@ using UnityEngine;
 public class PawnMovement : MovementStyle
 {
     private int forward;
-    private GameManager gameManager;
-
-    void Start() {
-        gameManager = GetComponent<GameManager>();    
-    }
 
     public override bool IsMovementAllowed(int posX, int posY) {
         //set forward to go up for white pieces and down for black pieces
-        if (Piece.Team == TeamColor.White) forward = 1;
-        else forward = -1;
+        if (Piece.Team == TeamColor.White) {
+            forward = 1;
+        }
+        else {
+            forward = -1;
+        }
 
         //basic forward movement
         if (posX == Piece.PosX) {
-            if (gameManager.PieceAtThisPosition(posX, Piece.PosY + forward) == null) { //if there is no piece one space in front of this piece
+            if (GameManager.PieceAtThisPosition(posX, Piece.PosY + forward) == null) { //if there is no piece one space in front of this piece
                 if (posY == Piece.PosY + forward) { //if I tried to move forward one space
                     return true;
                 }
-                if (gameManager.PieceAtThisPosition(posX, Piece.PosY + (forward * 2)) == null) { //if there is no piece two spaces forward from this piece
+                if (GameManager.PieceAtThisPosition(posX, Piece.PosY + (forward * 2)) == null) { //if there is no piece two spaces forward from this piece
                     if (posY == Piece.PosY + (forward * 2)) { //if I tried to move forward two spaces
                         if (Piece.HasMoved == false) { //if I have not moved before (so I can move up twice)
                             return true;
@@ -32,8 +31,11 @@ public class PawnMovement : MovementStyle
         //diagonal movement for taking opponent's pieces
         if (posY == Piece.PosY + forward) {
             if (posX == Piece.PosX + 1 || posX == Piece.PosX - 1) {
-                if (gameManager.PieceAtThisPosition(posX, posY).Team != Piece.Team) { //if I just moved onto an opponent's piece, move there
-                    return true;
+                Piece comparePiece = GameManager.PieceAtThisPosition(posX, posY);
+                if (comparePiece != null) {
+                    if (comparePiece.Team != Piece.Team) { //if I just moved onto an opponent's piece, move there
+                        return true;
+                    }
                 }
             }
         }

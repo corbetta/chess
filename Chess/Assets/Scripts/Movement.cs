@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
 
     void Start() {
         GetComponents<MovementStyle>(movementStyles);
-        gameManager = GameObject.FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
         piece = GetComponent<Piece>();
     }
 
