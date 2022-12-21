@@ -6,19 +6,37 @@ public enum TeamColor { White, Black }
 
 public class Piece : MonoBehaviour
 {
-    [SerializeField] private bool alive;
     [SerializeField] private int posX;
     [SerializeField] private int posY;
     [SerializeField] private TeamColor team;
+    private bool alive;
+    private bool hasMoved;
 
-    public bool Alive { get { return alive; } }
     public int PosX { get { return posX; } }
     public int PosY { get { return posY; } }
     public TeamColor Team { get { return team; } }
+    public bool Alive { get { return alive; } }
+    public bool HasMoved { get { return hasMoved; } }
 
-    public void SetPosition(int posX, int posY) {
+    /// <summary>
+    /// Move this piece to this new position
+    /// </summary>
+    /// <param name="posX"></param>
+    /// <param name="posY"></param>
+    public void MovePiece(int posX, int posY) {
         this.posX = posX;
         this.posY = posY;
+        transform.position = new Vector3(posX, transform.position.y, posY);
+        hasMoved = true;
+    }
+
+    /// <summary>
+    /// This piece has been captured. It will be removed from the board and made innactive.
+    /// </summary>
+    public void Captured() {
+        alive = false;
+        MovePiece(-99, -99); //moving the piece off the board for safety
+        gameObject.SetActive(false);
     }
 
 }

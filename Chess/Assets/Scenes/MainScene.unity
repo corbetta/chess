@@ -2101,7 +2101,6 @@ GameObject:
   - component: {fileID: 1581793947}
   - component: {fileID: 1581793946}
   - component: {fileID: 1581793945}
-  - component: {fileID: 1581793948}
   - component: {fileID: 1581793949}
   m_Layer: 0
   m_Name: TestObject
@@ -2150,19 +2149,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1581793948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581793944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c41e3ffe990b154092ddd5f43ea239f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 0
 --- !u!114 &1581793949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2175,7 +2161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c7b3291faf684e4f8616aeef3ffb523, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alive: 0
   posX: 0
   posY: 0
   team: 0
@@ -2208,7 +2193,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013856553714, guid: 8c44c8a6238ea0148bc07d2371dedc74, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.75
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4000013856553714, guid: 8c44c8a6238ea0148bc07d2371dedc74, type: 3}
       propertyPath: m_LocalPosition.y

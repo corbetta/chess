@@ -352,10 +352,12 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
+"Assets/Scripts/DiagonalMovement.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Movement.cs"
 "Assets/Scripts/MovementStyle.cs"
 "Assets/Scripts/OrthogonalMovement.cs"
+"Assets/Scripts/PawnMovement.cs"
 "Assets/Scripts/Piece.cs"
 -langversion:9.0
 
