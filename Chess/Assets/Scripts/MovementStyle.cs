@@ -6,7 +6,7 @@ public abstract class MovementStyle : MonoBehaviour
     public Piece Piece { get { return piece; } }
 
     void Start() {
-        piece = GetComponent<Piece>();    
+        piece = GetComponent<Piece>();
     }
     public abstract bool IsMovementAllowed(int posX, int posY);
 }

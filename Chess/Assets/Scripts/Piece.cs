@@ -20,8 +20,8 @@ public class Piece : MonoBehaviour
 
     void Start() {
         //set posX and posY based on the location in the scene. in the future this should go the other way around - posX and posY should decide where each piece starts on the scene
-        posX = (int)transform.position.x;
-        posY = (int)transform.position.z;
+        posX = (int)Mathf.Round(transform.position.x);
+        posY = (int)Mathf.Round(transform.position.z);
     }
 
     /// <summary>

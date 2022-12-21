@@ -35,8 +35,12 @@ public class Movement : MonoBehaviour
         //if a movementStyle has allowed me to move here, then check for pieces in this space 
         if (movementCleared) {
             Piece blockingPiece = gameManager.PieceAtThisPosition(posX, posY);
-            if (blockingPiece == null || !blockingPiece.Alive) return true; //if this space is empty, I can move there!
-            else if (blockingPiece.Team == piece.Team) return false; //if this space is occupied by my teammate, I cannot move there
+            if (blockingPiece == null || !blockingPiece.Alive) {
+                return true; //if this space is empty, I can move there!
+            }
+            else if (blockingPiece.Team == piece.Team) {
+                return false; //if this space is occupied by my teammate, I cannot move there
+            }
             else { //if this space is occupied by an opponnent, capture the piece and I can move there
                 blockingPiece.Captured();
                 return true;
